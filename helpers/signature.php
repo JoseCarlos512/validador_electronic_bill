@@ -9,7 +9,6 @@ class Signature {
 
         $doc->formatOutput = FALSE;
         $doc->preserveWhiteSpace = TRUE;
-        echo "Ruta" . $ruta;
         $doc->load($ruta);
 
         $objDSig = new XMLSecurityDSig(FALSE);
@@ -40,7 +39,6 @@ class Signature {
         $resp['respuesta'] = 'ok';
         $resp['hash_cpe'] = $hash_cpe;
         $resp['firma_cpe'] = $firma_cpe;
-        $resp['xml'] = $doc;
         return $resp;
     }
 }
